@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src",
+      "paths": {
+        "@baz": ["./baz.ts"],
+        "@boo": ["./boo.tsx"],
+  
+        "@root": ["./"],
+        "@root/*": ["./*"],
+        "@lib": ["./lib"],
+        "@lib/*": ["./lib/*"],
+        "@pages/*": ["src/pages/*"],
+        "@hooks/*": ["src/hooks/*"],
+  
+        "@my-react-select": [
+          "../node_modules/react-select",
+          "../node_modules/@types/react-select"
+        ],
+        "@my-react-select/*": [
+          "../node_modules/react-select/*",
+          "../node_modules/@types/react-select"
+        ]
+      }
+    }
+  }
