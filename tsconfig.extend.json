@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "baseUrl": "./src",
+      "baseUrl": "src",
       "paths": {
         "@baz": ["./baz.ts"],
         "@boo": ["./boo.tsx"],
@@ -11,6 +11,11 @@
         "@lib/*": ["./lib/*"],
         "@pages/*": ["src/pages/*"],
         "@hooks/*": ["src/hooks/*"],
+
+        "@store": ["./store"],
+        "@store/*": ["./*"],
+        "@common": ["./common"],
+        "@common/*": ["./*"],
   
         "@my-react-select": [
           "../node_modules/react-select",
