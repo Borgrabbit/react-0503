@@ -3,14 +3,25 @@ import { IntlProvider, FormattedMessage } from 'react-intl';
 import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ko from './lang/ko.json'
-import './App.css';
+import ko from '../lang/ko.json'
 
 import { Provider as ReduxProvider } from 'outqource-react/redux'; 
-import store from './stores';
+import store from '../stores';
+
+import MainRoute from './Main';
 
 const queryClient = new QueryClient();
 const locale = navigator.language;
+
+const RootRouter: React.FC = () => {
+  //useInit();
+
+  return(
+    <Routes>
+      {MainRoute}
+    </Routes>
+  );
+};
 
 const App : React.FC = () => {
   return (
@@ -19,8 +30,7 @@ const App : React.FC = () => {
         <RecoilRoot>
           <BrowserRouter>
             <ReduxProvider store={store}>
-              <div className="App">Learn React1</div>
-              <FormattedMessage id="1" defaultMessage="Today is {ts, date, ::yyyyMMdd}" values={{ts: Date.now()}} />
+              <RootRouter/>
             </ReduxProvider>
           </BrowserRouter>
         </RecoilRoot>
@@ -28,6 +38,5 @@ const App : React.FC = () => {
     </IntlProvider>
   );
 }
-
 
 export default App;
