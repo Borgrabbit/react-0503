@@ -1,5 +1,5 @@
 import React from "react";
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 const MainPage: React.FC= () => {
     return(

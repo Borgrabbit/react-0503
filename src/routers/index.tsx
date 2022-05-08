@@ -6,9 +6,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ko from '../lang/ko.json'
 
 import { Provider as ReduxProvider } from 'outqource-react/redux'; 
+import { GlobalModal, Modal, ModalProvider, ThemeProvider } from 'outqource-react/components';
 import store from '../stores';
+import theme from '../common/theme';
 
 import MainRoute from './Main';
+import HomeRoute from './Home';
 
 const queryClient = new QueryClient();
 const locale = navigator.language;
@@ -18,6 +21,7 @@ const RootRouter: React.FC = () => {
 
   return(
     <Routes>
+      {HomeRoute}
       {MainRoute}
     </Routes>
   );
@@ -30,7 +34,12 @@ const App : React.FC = () => {
         <RecoilRoot>
           <BrowserRouter>
             <ReduxProvider store={store}>
-              <RootRouter/>
+              <ThemeProvider theme={theme}>
+                <ModalProvider>
+                  <RootRouter/>
+                  <GlobalModal/>
+                </ModalProvider>
+              </ThemeProvider>
             </ReduxProvider>
           </BrowserRouter>
         </RecoilRoot>

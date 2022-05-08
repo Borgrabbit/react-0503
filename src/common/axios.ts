@@ -2,7 +2,7 @@ import { onRequest as onBaseRequest, onRequestProps as onBaseRequestProps } from
 import axios, { Method, AxiosRequestHeaders } from 'outqource-react/node_modules/axios';
 
 const instance = axios.create({
-  baseURL: 'https://api.dev.puppyred.com/api/game',
+  baseURL: 'https://api-dev.place-me.kr/',
 });
 
 instance.interceptors.request.use(async config => {
