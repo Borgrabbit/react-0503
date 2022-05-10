@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import { useQuery, useMutation, useQueryClient, QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes } from 'react-router-dom';
 import ko from '../lang/ko.json'
 
 import { Provider as ReduxProvider } from 'outqource-react/redux'; 
@@ -12,6 +12,7 @@ import theme from '../common/theme';
 
 import MainRoute from './Main';
 import HomeRoute from './Home';
+import AuthRoute from './Auth';
 
 const queryClient = new QueryClient();
 const locale = navigator.language;
@@ -23,6 +24,7 @@ const RootRouter: React.FC = () => {
     <Routes>
       {HomeRoute}
       {MainRoute}
+      {AuthRoute}
     </Routes>
   );
 };
