@@ -51,11 +51,5 @@ const HomePage : React.FC = () => {
     )
 }
 
-const PublicPage : React.FC = () => {
-    return <h4>PUBLIC</h4>;
-}
-const PrivatePage : React.FC = () => {
-    return <h4>PRIVATE</h4>;
-}
 
 export default HomePage;
