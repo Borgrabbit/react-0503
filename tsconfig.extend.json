@@ -9,6 +9,8 @@
         "@root/*": ["./*"],
         "@lib": ["./lib"],
         "@lib/*": ["./lib/*"],
+        "@file": ["./file"],
+        "@file/*": ["./file/*"],
         "@pages/*": ["src/pages/*"],
         "@hooks/*": ["src/hooks/*"],
 

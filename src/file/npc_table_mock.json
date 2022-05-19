@@ -1,0 +1,22 @@
+{
+    "1" : { "ItemID" : "500004", "NameID": "160023", "Resource": "npc_icon_puppyland1_m", "Icon": "npc_icon_puppyland1_m", "MenuGroup": "2" },
+    "2" : { "ItemID" : "500005", "NameID": "160027", "Resource": "npc_icon_puppyland2_m", "Icon": "npc_icon_puppyland2_m", "MenuGroup": "3" },
+    "3" : { "ItemID" : "500006", "NameID": "160028", "Resource": "npc_icon_puppyland3_m", "Icon": "npc_icon_puppyland3_m", "MenuGroup": "5" },
+    "4" : { "ItemID" : "500007", "NameID": "160031", "Resource": "npc_icon_puppyland4_m", "Icon": "npc_icon_puppyland4_m", "MenuGroup": "1" },
+    "5" : { "ItemID" : "500008", "NameID": "160024", "Resource": "npc_icon_puppyland5_m", "Icon": "npc_icon_puppyland5_m", "MenuGroup": "4" },
+    "6" : { "ItemID" : "500009", "NameID": "160025", "Resource": "npc_icon_puppyland6_m", "Icon": "npc_icon_puppyland6_m", "MenuGroup": "1" },
+    "7" : { "ItemID" : "500010", "NameID": "160030", "Resource": "npc_icon_puppyland7_m", "Icon": "npc_icon_puppyland7_m", "MenuGroup": "1" },
+    "8" : { "ItemID" : "500011", "NameID": "160029", "Resource": "npc_icon_puppyland8_m", "Icon": "npc_icon_puppyland8_m", "MenuGroup": "1" },
+    "9" : { "ItemID" : "500012", "NameID": "160026", "Resource": "npc_icon_puppyland9_m", "Icon": "npc_icon_puppyland9_m", "MenuGroup": "1" },
+    "10" : { "ItemID" : "100939", "NameID": "160032", "Resource": "ayo", "Icon": "1_ayo.png", "MenuGroup": "1" },
+    "11" : { "ItemID" : "100940", "NameID": "160033", "Resource": "EF", "Icon": "11_E-F.png", "MenuGroup": "1" },
+    "12" : { "ItemID" : "100941", "NameID": "160034", "Resource": "koko", "Icon": "4_koko.png", "MenuGroup": "1" },
+    "13" : { "ItemID" : "100942", "NameID": "160035", "Resource": "juni", "Icon": "2_Juni.png", "MenuGroup": "1" },
+    "14" : { "ItemID" : "100943", "NameID": "160036", "Resource": "ru", "Icon": "10_ru.png", "MenuGroup": "1" },
+    "15" : { "ItemID" : "100944", "NameID": "160037", "Resource": "mori", "Icon": "9_mori.png", "MenuGroup": "1" },
+    "16" : { "ItemID" : "100945", "NameID": "160038", "Resource": "nyamo", "Icon": "7_nyamo.png", "MenuGroup": "1" },
+    "17" : { "ItemID" : "100946", "NameID": "160039", "Resource": "rutim", "Icon": "8_Ru-tim.png", "MenuGroup": "1" },
+    "18" : { "ItemID" : "100947", "NameID": "160040", "Resource": "yaki", "Icon": "6_yaki.png", "MenuGroup": "1" },
+    "19" : { "ItemID" : "100948", "NameID": "160041", "Resource": "wani", "Icon": "5_wa-ni.png", "MenuGroup": "1" },
+    "20" : { "ItemID" : "100949", "NameID": "160066", "Resource": "yam", "Icon": "3_yam.png", "MenuGroup": "1" }
+}

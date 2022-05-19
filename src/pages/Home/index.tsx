@@ -9,7 +9,6 @@ const HomePage : React.FC = () => {
     const navigation = useNavigate();
     const location = useLocation();
     console.log(`location=> ${JSON.stringify(location)}`)
-    console.log('location=>', location)
 
     const loc1:any = useLocation();
     let fr1 = loc1.state?.pathname || '/';
@@ -35,13 +34,9 @@ const HomePage : React.FC = () => {
                 to={'./main'}>
                 \Main
             </Link>
-            <div css={css({
-                display:"flex",
-                flexDirection:"column"
-            })}>
-            <Link to={'./auth'}>Auth Example</Link>
-            <Link to={'./'}>Auth Example</Link>
-            <Link to={'./'}>Auth Example</Link>
+            <div css={css({ display:"flex", flexDirection:"column" })}>
+                <Link to={'./auth'}>Auth Example</Link>
+                <Link to={'./file'}>File IO Example</Link>
             </div>
             <div>
                 useMemo,useCallback,utilTypes

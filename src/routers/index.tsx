@@ -13,6 +13,7 @@ import theme from '../common/theme';
 import MainRoute from './Main';
 import HomeRoute from './Home';
 import AuthRoute from './Auth';
+import FileRoute from './File';
 
 const queryClient = new QueryClient();
 const locale = navigator.language;
@@ -25,6 +26,7 @@ const RootRouter: React.FC = () => {
       {HomeRoute}
       {MainRoute}
       {AuthRoute}
+      {FileRoute}
     </Routes>
   );
 };
