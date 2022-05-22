@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { Button } from "outqource-react/components";
-import npctable from "@file/npc_table_mock.json";
+// import npctable from "@file/npc_table_mock.json";
+import NpcTable from '@file/Npc/NPC.json';
 import mock from "@file/mock.json";
 import { css, jsx } from '@emotion/react';
 
@@ -12,19 +13,19 @@ import { css, jsx } from '@emotion/react';
 //   return (<div>TEST FC</div>)
 // }
 
-interface JSONData { 
-  [id:string] :JSONValue
+interface JSONData {
+  [id: string]: JSONValue;
 }
-
 interface JSONValue {
-  ItemID: string;
-  NameID: string;
+  NameID: number;
   Resource: string;
   Icon: string;
-  MenuGroup: string;
+  MenuGroup: number;
+  '#Desc': string;
+  '#en': string;
 }
 
-const mockData: JSONData = npctable;
+const mockData: JSONData = NpcTable;
 
 let iconList: string[] = [ '[Quest1]', '[Purchase2]', '[Sales3]' ]
 
@@ -34,9 +35,10 @@ const FilePage: React.FC= () => {
   const [ icon, setIcon ] = React.useState<string[]>([]);
   const range: number = 10; //
   const [distance, setDistance] = React.useState<number>();
+  const [npcId, SetNpcId] = React.useState<string>();
+  const [menuDataList, SetMenuDataList] = React.useState<string>();
   
   const handleJSON = (): void => {
-    console.log(typeof npctable)
     console.log( mockData["1"].NameID )
   }
 
@@ -58,6 +60,12 @@ const FilePage: React.FC= () => {
     }
   }
 
+  const getNpcMenu = (): void => {
+    const npcId: string = '500004';
+    SetNpcId(npcId);
+    SetMenuDataList(JSON.stringify(mockData[npcId]));
+  }
+
 
 
   return(
@@ -69,6 +77,8 @@ const FilePage: React.FC= () => {
       <Button className="" onClick={npcInRange}>[npcInRange]</Button>
       <div style={{margin: "0 auto"}}>Current Distance: {distance}</div>
       <div style={{margin: "0 auto"}}>{icon}</div>
+      <Button className="" onClick={getNpcMenu}>[Event: GetNpcMenu] targetNpcId:{npcId}</Button>
+      <div style={{margin: "0 auto"}}>{menuDataList}</div>
       <Button className="main_back" onClick={()=> nav(-1)}>Back</Button>
       
     </div>

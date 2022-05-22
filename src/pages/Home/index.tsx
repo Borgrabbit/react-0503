@@ -37,12 +37,12 @@ const HomePage : React.FC = () => {
             <div css={css({ display:"flex", flexDirection:"column" })}>
                 <Link to={'./auth'}>Auth Example</Link>
                 <Link to={'./file'}>File IO Example</Link>
+                <Link to={'./auth_outqource'}>Auth Outqource Example</Link>
             </div>
+            
             <div>
-                useMemo,useCallback,utilTypes
             </div>
         </>
-        
     )
 }
 

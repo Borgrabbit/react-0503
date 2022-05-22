@@ -8,10 +8,10 @@ const AuthPage: React.FC = () => {
         <AuthProvider>
         <div>
             Auth Page
+            <LoginPage></LoginPage>
             <RequireAuth>
                 <PrivatePage></PrivatePage>
             </RequireAuth>
-            <LoginPage></LoginPage>
         </div>
         </AuthProvider>
     )
@@ -89,7 +89,7 @@ function RequireAuth({children}:{children: JSX.Element}) {
     let location = useLocation();
 
     if(!auth.user) {
-        return <Navigate to="/auth" state={{from: location}} replace />;
+        return <React.Fragment/>;
     }
 
     return children;
@@ -118,7 +118,8 @@ function LoginPage() {
         // user experience.
 
         // navigate(from, { replace: true });
-        navigate(-1);
+        // navigate(replace);
+        navigate("/auth", {replace: true});
       });
     }
   

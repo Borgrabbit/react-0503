@@ -14,6 +14,7 @@ import MainRoute from './Main';
 import HomeRoute from './Home';
 import AuthRoute from './Auth';
 import FileRoute from './File';
+import AuthOutqourceRoute from './AuthOutqource';
 
 const queryClient = new QueryClient();
 const locale = navigator.language;
@@ -26,6 +27,7 @@ const RootRouter: React.FC = () => {
       {HomeRoute}
       {MainRoute}
       {AuthRoute}
+      {AuthOutqourceRoute}
       {FileRoute}
     </Routes>
   );
