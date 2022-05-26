@@ -26,6 +26,8 @@ interface JSONValue {
   '#en': string;
 }
 
+// test02 - commit 1
+
 const mockData: JSONData = NpcTable;
 
 let iconList: string[] = [ '[Quest1]', '[Purchase2]', '[Sales3]' ]
