@@ -1,11 +1,11 @@
-import { GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+// import { GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
-const googleAuthProvider = new GoogleAuthProvider();
+// const googleAuthProvider = new GoogleAuthProvider();
 
 type TUseAuth = {
     isLogined: boolean;
 
-    onSignInGoogle: () => Promise<void>;
+    // onSignInGoogle: () => Promise<void>;
 }
 
 // const useAuth = (): TUseAuth => {

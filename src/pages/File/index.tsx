@@ -5,6 +5,7 @@ import { Button } from "outqource-react/components";
 import NpcTable from '@file/Npc/NPC.json';
 import mock from "@file/mock.json";
 import { css, jsx } from '@emotion/react';
+import './style.scss';
 
 // const Test = (): React.ReactElement => {
 //   return <div>TEST EL</div>
@@ -29,6 +30,18 @@ const mockData: JSONData = NpcTable;
 
 let iconList: string[] = [ '[Quest1]', '[Purchase2]', '[Sales3]' ]
 
+const NpcQuestDialogue = () => {
+  return (
+    <>
+      <div className="quest_dialogue">
+        <div className="icon"></div>
+        <div className="name"></div>
+        <div className="message"></div>
+        <div className="confirm"></div>
+      </div>
+    </>
+  )
+}
 
 const FilePage: React.FC= () => {
   const nav = useNavigate();
@@ -40,6 +53,7 @@ const FilePage: React.FC= () => {
   
   const handleJSON = (): void => {
     console.log( mockData["1"].NameID )
+    
   }
 
   const setNpcInRange = (): void => setDistance(genDistance(1,9))
@@ -64,6 +78,15 @@ const FilePage: React.FC= () => {
     const npcId: string = '500004';
     SetNpcId(npcId);
     SetMenuDataList(JSON.stringify(mockData[npcId]));
+    console.log( typeof mockData[npcId]);
+    const data = mockData[npcId];
+    // for(let [k, v] in Object.entries(data)){
+    //   console.log(`key:${k} value:${v}`)
+    // }
+    console.log(Object.entries(data))
+    Object.entries(data).map((item, idx) => {
+
+    });
   }
 
 
@@ -80,7 +103,7 @@ const FilePage: React.FC= () => {
       <Button className="" onClick={getNpcMenu}>[Event: GetNpcMenu] targetNpcId:{npcId}</Button>
       <div style={{margin: "0 auto"}}>{menuDataList}</div>
       <Button className="main_back" onClick={()=> nav(-1)}>Back</Button>
-      
+      <NpcQuestDialogue />
     </div>
   )
 }
