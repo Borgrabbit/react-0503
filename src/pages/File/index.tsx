@@ -15,6 +15,7 @@ import './style.scss';
 // }
 
 //Test01 - commit 1
+//Test02 - commit 2
 
 interface JSONData {
   [id: string]: JSONValue;
